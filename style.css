@@ -1,0 +1,102 @@
+body {
+  font-family: 'Fira Code', monospace;
+  margin: 0;
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+header {
+  background-color: #161b22;
+  padding: 2rem;
+  text-align: center;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid #58a6ff;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #58a6ff; }
+}
+
+nav a {
+  margin: 0 15px;
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: #58a6ff;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: .3rem;
+}
+
+.projet-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.carte {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(100, 149, 237, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+  
+.carte:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
+}
+
+.carte h3 {
+  margin-top: 0;
+  color: #58a6ff;
+}
+
+.carte p {
+  margin-bottom: 1rem;
+}
+
+ @media (max-width: 600px) {
+   .projet-main {
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     align-items: center;
+   }
+ }
+    
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+a.button {
+  background-color: #238636;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+}
