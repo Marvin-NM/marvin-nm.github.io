@@ -1,0 +1,40 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+@import "main";
+
+:root[data-mode="dark"] {
+  --link-color: #00b4d8;
+  --link-underline-color: #00b4d8;
+  --btn-active-color: #00b4d8;
+
+  --main-bg: #0a0f1a;
+  --sidebar-bg: #070c14;
+  --topbar-bg: #070c14;
+
+  --text-color: #cdd6f4;
+  --text-muted-color: #7f849c;
+  --heading-color: #e6edf3;
+
+  --tag-bg: #0a1628;
+  --tag-color: #00b4d8;
+  --tag-border: #0e2040;
+
+  --code-bg: #0d1b2a;
+  --code-color: #00b4d8;
+  --code-header-bg: #0a1628;
+
+  --border-color: #0e2040;
+  --card-border-color: #0a1628;
+
+  --nav-cursor-color: ##00b4d8;
+}
+
+  
