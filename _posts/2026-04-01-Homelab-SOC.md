@@ -4,6 +4,7 @@ title: "Homelab SOC — Architecture et objectifs"
 date: 2026-02-19
 categories: [Cybersecurity, Homelab, Blue Team]
 tags: [SIEM, Wazuh, SOC, Detection, Active Directory]
+
 ---
 
 ## Pourquoi ce lab
@@ -18,6 +19,7 @@ L'environnement repose sur un domaine Active Directory
 (**`cador.inc`**), cible privilégiée des attaquants réels
 et terrain d'entraînement idéal pour les techniques
 d'attaque et de détection les plus courantes en entreprise.
+
 ---
 
 ## Architecture générale
@@ -29,7 +31,9 @@ distincts — pas uniquement pour des raisons techniques,
 mais parce que cette segmentation reflète ce qu'on
 retrouve dans un SI d'entreprise réel et permet de
 générer des flux réseau réalistes à analyser.
+
 ---
+
 ## Les briques et leur rôle défensif
 
 ### Supervision et détection — 10.0.1.0/24
@@ -46,9 +50,11 @@ SOC au quotidien.
 ### Environnement cible — 10.0.10.0/24
 
 **Windows Server 2019** héberge le contrôleur de domaine
+
 **cador.inc**, intentionnellement mal configuré pour
 reproduire des chemins d'attaque réalistes (inspiré du
 projet *Game of Active Directory Light*).
+
 **Windows 10** est la workstation utilisateur — cible
 typique des attaques de type phishing, mouvement latéral
 ou élévation de privilèges.
@@ -90,24 +96,31 @@ concrets, pas des exercices théoriques :
 - **Analyse de malware** — comportement, IoC,
  règles de détection
 Chaque scénario fera l'objet d'un writeup dédié.
+
 ---
+
 ## Évolutions prévues
 
 Le lab continue d'évoluer vers des capacités SOC
 plus avancées :
+
 **Forensique et réponse à incident**
 Ajout de **Tsurugi Linux** et **REMnux** pour couvrir
 l'analyse post-mortem et l'investigation numérique —
 les mêmes outils utilisés lors d'une vraie réponse
 à incident.
+
 **Pratique SIEM enterprise**
 Déploiement de **Splunk** avec le dataset **Boss of
 the SOC (BOTS v3)** — pour travailler sur des scénarios
 d'investigation réalistes et me familiariser avec
 l'outil le plus cité dans les offres SOC.
+
 **QRadar**
 Familiarisation avec un second SIEM enterprise,
 présent dans de nombreuses organisations.
+
 ---
+
 *Les writeups des scénarios d'attaque/détection
 arrivent au fil de la progression du lab.*
