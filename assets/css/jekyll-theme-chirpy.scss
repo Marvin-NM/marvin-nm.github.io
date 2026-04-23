@@ -2,13 +2,12 @@
 ---
 
 /* prettier-ignore */
-@use 'main
 {%- if jekyll.environment == 'production' -%}
-  .bundle
+  @import 'main.bundle';
+{%- else -%}
+  @import 'main';
 {%- endif -%}
-';
 
-@import "main";
 
 :root[data-mode="dark"] {
   --link-color: #00b4d8;
@@ -34,7 +33,7 @@
   --border-color: #0e2040;
   --card-border-color: #0a1628;
 
-  --nav-cursor-color: ##00b4d8;
+  --nav-cursor-color: #00b4d8;
 }
 
   
